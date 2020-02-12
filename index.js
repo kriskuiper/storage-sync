@@ -1,4 +1,4 @@
-import getHandlers from './lib/get-handlers'
+import getHandlers from './lib/get-handlers.js'
 
 /**
  * @description Syncs an object literal to sessionStorage
