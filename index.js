@@ -21,7 +21,7 @@ export const syncWithSessionStorage = (name, value) => {
 /**
  * @description Syncs an object literal to localStorage
  * @param {string} name Name of the value in localStorage
- * @param {*} value Value that should be synced with localStorage
+ * @param {object | array} value Value that should be synced with localStorage
  */
 export const syncWithLocalStorage = (name, value) => {
     if (isValidValue(value)) {
