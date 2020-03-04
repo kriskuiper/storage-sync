@@ -16,19 +16,21 @@ export default (storageName, name) => {
         ? setLocalStorageItem : setSessionStorageItem
 
     return {
-        get(targetValue, prop, recievingValue) {
-            console.log({
-                targetValue,
-                prop,
-                recievingValue
-            })
+        get(defaultValue, prop) {
+            const item = getItem(name)
+
+            if (item && prop) {
+                return item[prop]
+            } else if (item) {
+                return item
+            }
+
+            return defaultValue
         },
-        set(targetValue, prop, newValue) {
-            console.log('Setting in storage')
+        set(defaultValue, prop, newValue) {
+            defaultValue[prop] = newValue
 
-            targetValue[prop] = newValue
-
-            setItem(name, targetValue)
+            setItem(name, defaultValue)
 
             return true
         }
