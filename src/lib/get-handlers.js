@@ -3,7 +3,7 @@ import {
     setLocalStorageItem,
     getSessionStorageItem,
     setSessionStorageItem
-} from './storage-helpers.js'
+} from './storage-helpers.js.js'
 
 export default (storageName, name) => {
     if (!storageName) throw new ReferenceError('Storage name is not defined')
@@ -17,24 +17,23 @@ export default (storageName, name) => {
 
     return {
         get(targetValue, prop, recievingValue) {
-            console.log('Getting from storage: ', {
+            console.log({
                 targetValue,
                 prop,
                 recievingValue
             })
-
-            console.log('Get item function: ', getItem)
         },
         set(targetValue, prop, newValue) {
-            console.log('Setting in storage: ', {
-                targetValue,
-                prop,
-                newValue
-            })
+            console.log('Setting in storage')
 
-            console.log('Set item function: ', setItem)
+            targetValue[prop] = newValue
+
+            setItem(name, targetValue)
 
             return true
+        },
+        construct(targetValue, args) {
+            console.log('joe!', args)
         }
     }
 }

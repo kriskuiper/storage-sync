@@ -1,4 +1,8 @@
-import getHandlers from './lib/get-handlers.js'
+import getHandlers from './lib/get-handlers.js.js'
+import {
+    setLocalStorageItem,
+    setSessionStorageItem
+} from './lib/storage-helpers'
 
 const isValidValue = (value) => {
     return typeof value === 'object' 
@@ -12,6 +16,7 @@ const isValidValue = (value) => {
  */
 export const syncWithSessionStorage = (name, value) => {
     if (isValidValue(value)) {
+        setSessionStorageItem(name, value)
         return new Proxy(value, getHandlers('sessionStorage', name))
     }
 
@@ -25,8 +30,11 @@ export const syncWithSessionStorage = (name, value) => {
  */
 export const syncWithLocalStorage = (name, value) => {
     if (isValidValue(value)) {
+        setLocalStorageItem(name, value)
         return new Proxy(value, getHandlers('localStorage', name))
     }
 
     throw new TypeError('Value should be of type object or array.')
 }
+
+const person = syncWithLocalStorage('person', { name: 'henk' })
