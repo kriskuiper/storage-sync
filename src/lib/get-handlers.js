@@ -31,9 +31,6 @@ export default (storageName, name) => {
             setItem(name, targetValue)
 
             return true
-        },
-        construct(targetValue, args) {
-            console.log('joe!', args)
         }
     }
 }
