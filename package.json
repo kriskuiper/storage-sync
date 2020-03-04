@@ -5,6 +5,9 @@
   "repository": "git@github.com:kriskuiper/storage-sync.git",
   "author": "Kris <kriskuiper74@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "test": "jest test"
+  },
   "devDependencies": {
     "jest": "^25.1.0"
   }
