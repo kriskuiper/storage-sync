@@ -36,5 +36,3 @@ export const syncWithLocalStorage = (name, value) => {
 
     throw new TypeError('Value should be of type object or array.')
 }
-
-const person = syncWithLocalStorage('person', { name: 'henk' })
