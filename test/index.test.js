@@ -27,6 +27,13 @@ describe('Syncs with localStorage', () => {
 
         expect(item).toEqual(person)
     })
+
+    test('Gets property from localStorage', () => {
+        const person = syncWithLocalStorage('person', user)
+        const { name } = person
+
+        expect(name).toBeTruthy()
+    })
 })
 
 describe('Syncs with sessionStorage', () => {
