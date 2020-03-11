@@ -1,17 +1,17 @@
 describe('Syncs with localStorage', () => {
-    it('Inits item in localStorage', () => {
+    test('Inits item in localStorage', () => {
         return Promise.resolve()
     })
 
-    it('Inits item in sessionStorage', () => {
+    test('Inits item in sessionStorage', () => {
         return Promise.resolve()
     })
 
-    it('Updates item in localStorage', () => {
+    test('Updates item in localStorage', () => {
         return Promise.resolve()
     })
 
-    it('Updates item in sessionStorage', () => {
+    test('Updates item in sessionStorage', () => {
         return Promise.resolve()
     })
 })
