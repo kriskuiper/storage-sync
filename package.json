@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "git@github.com:kriskuiper/storage-sync.git",
-  "author": "Kris <kriskuiper74@gmail.com>",
+  "author": "Kris Kuiper <kriskuiper74@gmail.com>",
   "license": "MIT",
   "scripts": {
     "test": "jest test"
