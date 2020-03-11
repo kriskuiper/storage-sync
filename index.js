@@ -20,7 +20,7 @@ export const syncWithSessionStorage = (name, value) => {
         return new Proxy(value, getHandlers('sessionStorage', name))
     }
 
-    throw new TypeError('Value should be of type object or array.')
+    throw new TypeError(`Value should be of type object or array, value is now ${typeof value}.`)
 }
 
 /**
@@ -34,5 +34,5 @@ export const syncWithLocalStorage = (name, value) => {
         return new Proxy(value, getHandlers('localStorage', name))
     }
 
-    throw new TypeError('Value should be of type object or array.')
+    throw new TypeError(`Value should be of type object or array, value is now ${typeof value}.`)
 }
