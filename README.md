@@ -33,3 +33,6 @@ console.log(JSON.parse(localStorage.getItem('person')))
 
 ## Contributing
 Found an issue or have a feature request? Open an issue and we'll discuss if it's worth fixing or adding it. Please make sure to update tests accordingly before creating a Pull Request.
+
+## License
+Unless stated otherwise, license is MIT.
