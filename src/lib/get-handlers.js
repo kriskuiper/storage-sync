@@ -3,7 +3,7 @@ import {
     setLocalStorageItem,
     getSessionStorageItem,
     setSessionStorageItem
-} from './storage-helpers.js.js'
+} from './storage-helpers'
 
 export default (storageName, name) => {
     if (!storageName) throw new ReferenceError('Storage name is not defined')

@@ -1,4 +1,4 @@
-import getHandlers from './lib/get-handlers.js.js'
+import getHandlers from './lib/get-handlers'
 import {
     setLocalStorageItem,
     setSessionStorageItem
