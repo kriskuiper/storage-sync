@@ -5,17 +5,17 @@ Using JS Proxy to sync an object literal with local- or sessionStorage.
 Use your package manager to install the package.
 
 ```bash
-npm install storage-sync
+npm install web-storage-sync
 
 # OR
 
-yarn add storage-sync
+yarn add web-storage-sync
 ```
 
 ## Usage
 1. Syncing objects with a storage (works the same in both cases)
 ```js
-import { syncWithLocalStorage } from 'storage-sync'
+import { syncWithLocalStorage } from 'web-storage-sync'
 
 // Automatically sets the object in localStorage under 'person' key
 const person = syncWithLocalStorage('person', {
