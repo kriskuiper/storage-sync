@@ -5,8 +5,7 @@ import {
 } from './lib/storage-helpers'
 
 const isValidValue = (value) => {
-    return typeof value === 'object' 
-        || typeof value === 'array'
+    return typeof value === 'object'
 }
 
 /**
@@ -20,7 +19,7 @@ export const syncWithSessionStorage = (name, value) => {
         return new Proxy(value, getHandlers('sessionStorage', name))
     }
 
-    throw new TypeError(`Value should be of type object or array, value is now ${typeof value}.`)
+    throw new TypeError(`Value should be of type object, value is now ${typeof value}.`)
 }
 
 /**
@@ -34,5 +33,5 @@ export const syncWithLocalStorage = (name, value) => {
         return new Proxy(value, getHandlers('localStorage', name))
     }
 
-    throw new TypeError(`Value should be of type object or array, value is now ${typeof value}.`)
+    throw new TypeError(`Value should be of type object, value is now ${typeof value}.`)
 }
