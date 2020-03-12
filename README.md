@@ -13,19 +13,19 @@ yarn add storage-sync
 ```
 
 ## Usage
-1. Syncing objects with a storage (works the same in both local- and sessionStorage)
+1. Syncing objects with a storage (works the same in both cases)
 ```js
 import { syncWithLocalStorage } from 'storage-sync'
 
 // Automatically sets the object in localStorage under 'person' key
-const localPerson = syncWithLocalStorage('person', {
+const person = syncWithLocalStorage('person', {
     firstName: 'Firstname',
     lastName: 'Lastname'
 })
 
 // When adding or changing a property,
 // the object is directly synced with localStorage:
-localPerson.age = 20
+person.age = 20
 
 console.log(JSON.parse(localStorage.getItem('person')))
 // > { firstName: 'Firstname', lastName: 'Lastname', age: 20 }
