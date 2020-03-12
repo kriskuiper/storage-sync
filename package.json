@@ -1,5 +1,6 @@
 {
   "name": "storage-sync",
+  "description": "Using JS Proxy to sync an object literal with local- or sessionStorage",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "git@github.com:kriskuiper/storage-sync.git",
