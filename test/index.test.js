@@ -8,7 +8,7 @@ const user = {
     surname: 'Surname'
 }
 
-const users = [
+const initialUsers = [
     {
         name: 'User one',
         surname: 'First'
@@ -65,5 +65,15 @@ describe('Syncs object with sessionStorage', () => {
         const item = JSON.parse(storage.getItem('person'))
 
         expect(item).toEqual(person)
+    })
+})
+
+describe('Syncs array with localStorage', () => {
+    test('Inits array in localStorage', () => {
+        const storage = window.localStorage
+        const users = syncWithLocalStorage('users', initialUsers)
+        const usersInStorage = JSON.parse(storage.getItem('users'))
+
+        expect(users).toEqual(usersInStorage)
     })
 })
