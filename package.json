@@ -16,8 +16,8 @@
   "devDependencies": {
     "@babel/core": "7.8.7",
     "@babel/preset-env": "7.8.7",
-    "babel-jest": "25.1.0",
-    "jest": "25.1.0",
+    "babel-jest": "26.0.1",
+    "jest": "26.0.1",
     "npm-run-all": "4.1.5",
     "rollup": "2.9.1"
   },
