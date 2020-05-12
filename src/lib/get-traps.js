@@ -6,8 +6,13 @@ import {
 } from './storage-helpers'
 
 export default (storageName, name) => {
-    if (!storageName) throw new ReferenceError('Storage name is not defined')
-    if (!name) throw new ReferenceError(`You should give a name to the value you want to pass into ${storageName}`)
+    if (!storageName) {
+        throw new ReferenceError('Storage name is not defined')
+    }
+    
+    if (!name) {
+        throw new ReferenceError(`You should give a name to the value you want to pass into ${storageName}`)
+    }
 
     // All checks completed, we can now continue
     const getItem = storageName === 'localStorage'
