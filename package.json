@@ -7,8 +7,9 @@
   "author": "Kris Kuiper <kriskuiper74@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "run-s build:js patch",
+    "prebuild": "run-s test",
     "build:js": "rollup -c",
+    "build": "run-s build:js patch",
     "patch": "npm version patch",
     "test": "jest test"
   },
