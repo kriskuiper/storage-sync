@@ -8,8 +8,19 @@ const user = {
     surname: 'Surname'
 }
 
-describe('Syncs with localStorage', () => {
-    test('Inits item in localStorage', () => {
+const users = [
+    {
+        name: 'User one',
+        surname: 'First'
+    },
+    {
+        name: 'User two',
+        surname: 'Second'
+    }
+]
+
+describe('Syncs object with localStorage', () => {
+    test('Inits object in localStorage', () => {
         const storage = window.localStorage
         const person = syncWithLocalStorage('person', user)
         const item = JSON.parse(storage.getItem('person'))
@@ -17,7 +28,7 @@ describe('Syncs with localStorage', () => {
         expect(item).toEqual(person)
     })
 
-    test('Updates item in localStorage', () => {
+    test('Updates object in localStorage', () => {
         const storage = window.localStorage
         const person = syncWithLocalStorage('person', user)
 
@@ -28,7 +39,7 @@ describe('Syncs with localStorage', () => {
         expect(item).toEqual(person)
     })
 
-    test('Gets property from localStorage', () => {
+    test('Gets object property from localStorage', () => {
         const person = syncWithLocalStorage('person', user)
         const { name } = person
 
@@ -36,8 +47,8 @@ describe('Syncs with localStorage', () => {
     })
 })
 
-describe('Syncs with sessionStorage', () => {
-    test('Inits item in sessionStorage', () => {
+describe('Syncs object with sessionStorage', () => {
+    test('Inits object in sessionStorage', () => {
         const storage = window.sessionStorage
         const person = syncWithSessionStorage('person', user)
         const item = JSON.parse(storage.getItem('person'))
@@ -45,7 +56,7 @@ describe('Syncs with sessionStorage', () => {
         expect(item).toEqual(person)
     })
 
-    test('Updates item in sessionStorage', () => {
+    test('Updates object in sessionStorage', () => {
         const storage = window.sessionStorage
         const person = syncWithSessionStorage('person', user)
 
