@@ -7,13 +7,19 @@
   "author": "Kris Kuiper <kriskuiper74@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "build": "run-s build:js patch publish",
+    "build:js": "rollup -c",
+    "patch": "npm version patch",
+    "publish": "npm publish",
     "test": "jest test"
   },
   "devDependencies": {
     "@babel/core": "7.8.7",
     "@babel/preset-env": "7.8.7",
     "babel-jest": "25.1.0",
-    "jest": "25.1.0"
+    "jest": "25.1.0",
+    "npm-run-all": "^4.1.5",
+    "rollup": "^2.9.1"
   },
   "dependencies": {}
 }
