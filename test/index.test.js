@@ -1,7 +1,7 @@
 const {
     syncWithLocalStorage,
     syncWithSessionStorage
-} = require('../index.js')
+} = require('../src/index.js')
 
 const user = {
     name: 'Henk',
