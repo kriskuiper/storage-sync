@@ -1,5 +1,15 @@
 {
-  "extends": [
-    "config:base"
+  "schedule": "every month",
+  "stabilityDays": 30,
+  "enabledManagers": ["yarn"],
+  "packageRules": [
+    {
+      "groupName": "Dependencies",
+      "depTypeList": ["dependencies"]
+    },
+    {
+      "groupName": "Development dependencies",
+      "depTypeList": ["devDependencies"]
+    }
   ]
 }
